@@ -17,7 +17,7 @@ ENTRYPOINT [ "python","dataingest.py" ]
 #     --name=pg-database \
 #     postgres:13
 
-# CSV_PATH="notebooks/sismologico_CDMX.csv"
+# CSV_PATH="sismologico_CDMX.csv"
 # docker run -it \
 #     --network=pg-network \
 #     python_test:001 \
