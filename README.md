@@ -1,4 +1,5 @@
-#Seismic activity in CDMX data pipeline project
+#Seismic activity in CDMX data pipeline practice project focused on Data Ingestion 
+
 
 This is a guided project to stablish a pipeline with the source being https://www.kaggle.com/datasets/vladimirgc/mexico-city-earthquakes-2020-2024. I first used the Kaggle API to download the needed csv file.
 
@@ -17,3 +18,5 @@ docker run -it \
     --db=sismos24 \
     --table=seismic24 \
     --csv_path=${CSV_PATH}
+
+*You can review the data in the DB by going to https://localhost:8080
