@@ -11,7 +11,7 @@ ENTRYPOINT [ "python","dataingest.py" ]
 #     -e POSTGRES_USER="root" \
 #     -e POSTGRES_PASSWORD="root" \
 #     -e POSTGRES_DB="sismos24" \
-#     -v "/home/cdlzs/sismos_cdmx/postgres_data:/var/lib/postgresql/data:rw" \
+#     -v "/home/cdlzs/seismic24/seismic_act_cdmx/postgres_data:/var/lib/postgresql/data:rw" \
 #     -p 5432:5432 \
 #     --network=pg-network \
 #     --name=pg-database \
@@ -24,7 +24,7 @@ ENTRYPOINT [ "python","dataingest.py" ]
 #     --user=root \
 #     --password=root \
 #     --host=pg-database \
-#     --port=5432 \
+#     --port 5432 \
 #     --db=sismos24 \
 #     --table=seismic24 \
 #     --csv_path=${CSV_PATH}
