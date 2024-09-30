@@ -19,15 +19,12 @@ ENTRYPOINT [ "python","dataingest.py" ]
 
 # CSV_PATH="sismologico_CDMX.csv"
 # docker run -it \
-#     --network=pg-network \
+#     --network=seismic_act_cdmx_default \
 #     python_test:001 \
 #     --user=root \
 #     --password=root \
-#     --host=pg-database \
+#     --host=seismic_act_cdmx-pgdatabase-1 \
 #     --port 5432 \
 #     --db=sismos24 \
 #     --table=seismic24 \
 #     --csv_path=${CSV_PATH}
-
-
-
