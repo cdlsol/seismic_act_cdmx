@@ -3,4 +3,3 @@ postgres_data/
 
 # Ignore pgAdmin data directory
 pgadmin_data/
-pgadmin_data/
