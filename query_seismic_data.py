@@ -1,6 +1,8 @@
 import pandas as pd
 from sqlalchemy import create_engine
 import argparse
+import folium
+import os
 
 def query_db(user, password, host, port, db_name, query):
     #Create a SQLAlchemy engine for PostgreSQL
@@ -32,3 +34,26 @@ if __name__ == "__main__":
     # Print the DataFrame
     if df is not None:
         print(df)
+    
+    hotzone = df[['Referencia de localizacion','Latitud','Longitud']]
+    print("testing hotzone")
+    print(hotzone)
+
+    # Create a map centered around the average of the locations
+    m = folium.Map(location=[20, -98], zoom_start=4)
+
+    # Add markers for each location
+    for index, loc in hotzone.iterrows():
+        folium.Marker(
+        location=[loc['Latitud'], loc['Longitud']],
+        popup=loc['Referencia de localizacion'],
+        icon=folium.Icon(color='blue'),
+    ).add_to(m)
+
+    save_dir = '/home/cdlzs/seismic24/maps'
+    os.makedirs(save_dir, exist_ok=True)  # Create the directory if it doesn't exist
+
+    # Save the map to an HTML file in the hardcoded directory
+    save_path = os.path.join(save_dir, "map.html")
+    m.save(save_path)
+    print(f"Map saved to {save_path}")
