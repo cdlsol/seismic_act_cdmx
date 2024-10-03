@@ -18,3 +18,9 @@ services:
       - "/home/cdlzs/seismic24/seismic_act_cdmx/pgadmin_data:/var/lib/pgadmin"
     ports:
       - "8080:80"
+  python_app:  
+  build:
+    context: .
+    dockerfile: Dockerfile
+  depends_on:
+    - pgdatabase

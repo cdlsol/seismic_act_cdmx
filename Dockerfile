@@ -2,8 +2,10 @@ FROM python:3.9
 
 WORKDIR /app
 RUN pip install pandas sqlalchemy psycopg2-binary
+RUN mkdir -p /home/cdlzs/seismic24/maps
 COPY sismologico_CDMX.csv sismologico_CDMX.csv
 COPY dataingest.py dataingest.py
+COPY query_seismic_data.py query_seismic_data.py 
 
 ENTRYPOINT [ "python","dataingest.py" ]
 
