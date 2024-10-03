@@ -6,16 +6,18 @@ This is a guided project to stablish a pipeline with the source being https://ww
 
 For Database, I used Postgresql, which will be set-up via Docker Container.
 
+First, ensue that Docker is installed and running.
+
 In order to run the containerized pipeline, you need to execute the following command in terminal:
 
 CSV_PATH="sismologico_CDMX.csv"
 docker run -it \
     --network=seismic_act_cdmx_default \
-    python_test:001 \
+    cdlsol/sunny_projects:seismic_pipeline01 \
     --user=root \
     --password=root \
     --host=seismic_act_cdmx-pgdatabase-1 \
-    --port 5432 \
+    --port=5432 \
     --db=sismos24 \
     --table=seismic24 \
     --csv_path=${CSV_PATH}
