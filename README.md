@@ -1,6 +1,6 @@
 #Seismic activity in CDMX data pipeline practice project focused on Data Ingestion 
 
-Link to Docker Image: https://hub.docker.com/layers/cdlsol/sunny_projects/seismic_pipeline/images/sha256-8a593d893e183c8ce0957634a682d4e98aa8fce4e20ea947fdb463192d4024a0?context=explore
+Link to Docker Image: https://hub.docker.com/layers/cdlsol/sunny_projects/seismic_pipeline01/images/sha256-7a8d8caba497a37cd11c122aa37aba62bd7214f634db0636f9fb67400592c1d6?context=repo
 
 This is a guided project to stablish a pipeline with the source being https://www.kaggle.com/datasets/vladimirgc/mexico-city-earthquakes-2020-2024. I first used the Kaggle API to download the needed csv file.
 
