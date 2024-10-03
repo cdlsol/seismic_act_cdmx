@@ -21,3 +21,7 @@ docker run -it \
     --csv_path=${CSV_PATH}
 
 *You can review the data in the DB by going to https://localhost:8080
+
+In order to run the query_seismic_data.py module, in charge of querying the DB and creating a map visualization, you need ro run the following command:
+
+python3 query_seismic_data.py --user=root --password=root --host=localhost --port=5432 --db=sismos24 --query="SELECT * FROM seismic24 WHERE \"Fecha\" >= '2024-06-01';"
