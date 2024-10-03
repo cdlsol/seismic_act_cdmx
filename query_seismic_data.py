@@ -47,13 +47,13 @@ if __name__ == "__main__":
         folium.Marker(
         location=[loc['Latitud'], loc['Longitud']],
         popup=loc['Referencia de localizacion'],
-        icon=folium.Icon(color='blue'),
+        icon=folium.Icon(color='red'),
     ).add_to(m)
 
     save_dir = '/home/cdlzs/seismic24/maps'
     os.makedirs(save_dir, exist_ok=True)  # Create the directory if it doesn't exist
 
     # Save the map to an HTML file in the hardcoded directory
-    save_path = os.path.join(save_dir, "map.html")
+    save_path = os.path.join(save_dir, "cdmx_seismic_map.html")
     m.save(save_path)
     print(f"Map saved to {save_path}")
