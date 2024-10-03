@@ -20,7 +20,7 @@ docker run -it \
     --table=seismic24 \
     --csv_path=${CSV_PATH}
 
-*You can review the data in the DB by going to https://localhost:8080
+*You can review the data in the DB by going to your localhost.
 
 In order to run the query_seismic_data.py module, in charge of querying the DB and creating a map visualization, you need ro run the following command in terminal:
 
